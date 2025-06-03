@@ -3,7 +3,7 @@ import time
 
 pyautogui.PAUSE = 0.5 
 
-# Windows + 1 (Como tengo Google Chrome anclado a la barra de tareas, lo selecciono y creo una pestaña nueva)
+# Windows + 9 (Como tengo Google Chrome anclado a la barra de tareas, lo selecciono y creo una pestaña nueva)
 pyautogui.hotkey('win', '9') # 
 time.sleep(1)
 pyautogui.hotkey('ctrl', 't')

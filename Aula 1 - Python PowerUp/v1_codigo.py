@@ -3,7 +3,7 @@ import time
 
 pyautogui.PAUSE = 0.5 
 
-# Windows + 1 (Como tengo Google Chrome anclado a la barra de tareas, lo selecciono y creo una pestaña nueva)
+# Windows + 9 (Como tengo Google Chrome anclado a la barra de tareas, lo selecciono y creo una pestaña nueva)
 pyautogui.hotkey('win', '9') # 
 time.sleep(1)
 pyautogui.hotkey('ctrl', 't')
@@ -54,5 +54,13 @@ pyautogui.press("enter") # cadastra o produto (botao enviar)
 # dar scroll de tudo pra cima
 pyautogui.scroll(5000)
 pyautogui.click(x=322, y=236)
+
+import tkinter as tk
+from tkinter import messagebox
+
+root = tk.Tk()
+root.withdraw()  # Oculta la ventana principal
+messagebox.showinfo("Finalizado", "El script ha terminado correctamente.")
+root.destroy()
 
 # Passo 5: Repetir o processo de cadastro até o fim
