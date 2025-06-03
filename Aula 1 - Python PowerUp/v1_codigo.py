@@ -22,38 +22,38 @@ pyautogui.press("tab") # passando pro próximo campo
 pyautogui.write("sua senha")
 pyautogui.press("enter") # apertar enter para fazer o login
 time.sleep(3)
+for i in range(2):
+    # Passo 4: Cadastrar um produto
+    # codigo,marca,tipo,categoria,preco_unitario,custo,obs
+    # MOLO000251,Logitech,Mouse,1,25.95,6.50,
 
-# Passo 4: Cadastrar um produto
-# codigo,marca,tipo,categoria,preco_unitario,custo,obs
-# MOLO000251,Logitech,Mouse,1,25.95,6.50,
-
-# clicar no campo de código
-pyautogui.hotkey("tab")
-# pegar da tabela o valor do campo que a gente quer preencher
-codigo = "MOLO000251"
-# preencher o campo
-pyautogui.write(str(codigo))
-# passar para o proximo campo
-pyautogui.press("tab")
-# preencher o campo
-pyautogui.write("Logitech")
-pyautogui.press("tab")
-pyautogui.write("Mouse")
-pyautogui.press("tab")
-pyautogui.write("1")
-pyautogui.press("tab")
-pyautogui.write("25.95")
-pyautogui.press("tab")
-pyautogui.write("6.50")
-pyautogui.press("tab")
-# obs = tabela.loc[linha, "obs"]
-# if not pd.isna(obs):
-#     pyautogui.write(str(tabela.loc[linha, "obs"]))
-pyautogui.press("tab")
-pyautogui.press("enter") # cadastra o produto (botao enviar)
-# dar scroll de tudo pra cima
-pyautogui.scroll(5000)
-pyautogui.click(x=322, y=236)
+    # clicar no campo de código
+    pyautogui.hotkey("tab")
+    # pegar da tabela o valor do campo que a gente quer preencher
+    codigo = "MOLO000251"
+    # preencher o campo
+    pyautogui.write(str(codigo))
+    # passar para o proximo campo
+    pyautogui.press("tab")
+    # preencher o campo
+    pyautogui.write("Logitech")
+    pyautogui.press("tab")
+    pyautogui.write("Mouse")
+    pyautogui.press("tab")
+    pyautogui.write("1")
+    pyautogui.press("tab")
+    pyautogui.write("25.95")
+    pyautogui.press("tab")
+    pyautogui.write("6.50")
+    pyautogui.press("tab")
+    # obs = tabela.loc[linha, "obs"]
+    # if not pd.isna(obs):
+    #     pyautogui.write(str(tabela.loc[linha, "obs"]))
+    pyautogui.press("tab")
+    pyautogui.press("enter") # cadastra o produto (botao enviar)
+    # dar scroll de tudo pra cima
+    pyautogui.scroll(5000)
+    pyautogui.click(x=322, y=236)
 
 import tkinter as tk
 from tkinter import messagebox
