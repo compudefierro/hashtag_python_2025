@@ -9,11 +9,11 @@ import time
 # pyautogui.press -> apertar 1 tecla
 # pyautogui.click -> clicar em algum lugar da tela
 # pyautogui.hotkey -> combinação de teclas
-pyautogui.PAUSE = 0.3
+pyautogui.PAUSE = 0.5
 
 # abrir o navegador (chrome)
 pyautogui.press("win")
-pyautogui.write("chrome")
+pyautogui.write("google chrome")
 pyautogui.press("enter")
 
 # entrar no link 
@@ -24,12 +24,14 @@ time.sleep(3)
 
 # Passo 2: Fazer login
 # selecionar o campo de email
-pyautogui.click(x=685, y=451)
+# pyautogui.click(x=934, y=1012)
+pyautogui.press("tab") # passando pro próximo campo
 # escrever o seu email
 pyautogui.write("pythonimpressionador@gmail.com")
 pyautogui.press("tab") # passando pro próximo campo
 pyautogui.write("sua senha")
-pyautogui.click(x=955, y=638) # clique no botao de login
+pyautogui.press("enter") # apertar enter para fazer o login
+# pyautogui.click(x=955, y=638) # clique no botao de login
 time.sleep(3)
 
 # Passo 3: Importar a base de produtos pra cadastrar
@@ -42,7 +44,7 @@ print(tabela)
 # Passo 4: Cadastrar um produto
 for linha in tabela.index:
     # clicar no campo de código
-    pyautogui.click(x=653, y=294)
+    pyautogui.hotkey("tab")
     # pegar da tabela o valor do campo que a gente quer preencher
     codigo = tabela.loc[linha, "codigo"]
     # preencher o campo
@@ -67,4 +69,6 @@ for linha in tabela.index:
     pyautogui.press("enter") # cadastra o produto (botao enviar)
     # dar scroll de tudo pra cima
     pyautogui.scroll(5000)
+    pyautogui.click(x=687, y=190)
+    
     # Passo 5: Repetir o processo de cadastro até o fim
